@@ -1,108 +1,136 @@
-body{
-  /*background: rgb(127,255,212)*/
+body {
   background-image: url('fundo.jpg');
   background-position: left center;
-  
-  
 }
 
-h2{
- color: #ffffff;
- animation-name: cor;
- animation-duration: 3s;
- /*animation-iteration-count: infinite;*/
- 
- 
-}
-label{
+h2 {
   color: #ffffff;
+  animation-name: cor;
+  animation-duration: 3s;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    padding-top: 5px;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #0074d9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    margin-left: 50px;
-    cursor: pointer;
-    
-  }
-  table {
-    font-family: 'Times New Roman', Times, serif;
-    color: #ffffff;
-    padding-top: 0%;
-  }
+  color: #ffffff;
+  display: block;
+  margin-bottom: 8px;
+  padding-top: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0074d9;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+table {
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+  padding-top: 0%;
+}
 
 .checagem {
-width: 20%;
-background: rgb(0, 191,255,50);
-/*align-items: center;*/
-height: 27vh;
-position: absolute;
-left: 300px;
-top: 100px;
-
+  width: 20%;
+  background: rgb(0, 191,255,50);
+  height: 27vh;
+  position: absolute;
+  left: 300px;
+  top: 100px;
 }
 
 .container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;  /*Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
   height: 3em;
-  
-  
 }
 
-.tabela{
-height: 30%;
-position: absolute;
-bottom: 9em;
-left: 300px;
+.tabela {
+  height: 30%;
+  position: absolute;
+  bottom: 9em;
+  left: 300px;
 }
 
 .tabela h2 {
-width: auto;
-text-align: center;
-line-height: 2em;
-
+  width: auto;
+  text-align: center;
+  line-height: 2em;
 }
 
-.cabeçalho{
-margin: 0%;
-
+.cabeçalho {
+  margin: 0%;
 }
-img{
-height: 50px;
 
+img {
+  height: 50px;
 }
-#titulo{
+
+#titulo {
   position: absolute;
   top: 20px;
   left: 90px;
-  vertical-align: center;  
-
-}
-.tabela h2 {
-margin: 0px;
-padding: 0%;
-align-items: center;
-padding-bottom: 0em;
-
+  vertical-align: center;
 }
 
-@keyframes cor{
-
-from {color: blue;}
-
-to { color: :aqua;}
-
+@keyframes cor {
+  from { color: blue; }
+  to { color: aqua; }
 }
-  
-  
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .checagem, .tabela {
+    left: 200px;
+  }
+
+  #titulo {
+    left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checagem, .tabela {
+    width: 80%;
+    left: 10%;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  #titulo {
+    top: 10px;
+    left: 10px;
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 480px) {
+  .checagem, .tabela {
+    width: 100%;
+    left: 0;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  #titulo {
+    font-size: smaller;
+  }
+}
